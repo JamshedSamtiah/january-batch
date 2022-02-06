@@ -28,16 +28,7 @@ a {
   text-decoration: none;
 }
 
-/* units */
 
-/* pixels = px --> non responsive
-
-percent = % --> responsive
-fractional = fr --> responsive
-view-width/view-height = vw/vh --> responsive */
-/* rem, em --> font relative units */
-
-/* by default => 1em/rem :16px */
 
 #main {
   width: 100%;
@@ -55,7 +46,7 @@ nav {
   width: 100%;
   z-index: 1;
   background-color: var(--white-main-color);
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: 0px 5px 10px 0px #aaa;
 }
 
 nav ul {
@@ -76,16 +67,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: var(--main-bg-color);
-  color: #fff;
+  /* background-color: var(--main-bg-color); */
+  color: coral;
   border-radius: 5px;
 }
 
 .get-in-touch {
-  color: var(--dark-gray-color);
+  color: var(--main-bg-color);
+  font-family: cursive;
   font-weight: 500;
   font-size: 0.9em;
-  border-bottom: 2px solid var(--main-bg-color);
+  border-bottom: 2px solid coral;
 }
 
 .logo-heading {
@@ -97,7 +89,9 @@ nav ul li a:hover {
 .name {
   font-weight: 800;
   text-decoration: underline;
-  text-decoration-color: var(--main-bg-color);
+  color: coral;
+  font-family: cursive;
+  /* text-decoration-color: var(--main-bg-color); */
 }
 
 /* Content */
@@ -107,12 +101,30 @@ nav ul li a:hover {
   width: 90%;
   justify-content: space-around;
   align-items: center;
-  /* Figure this out! (Advanced) */
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.main-text{
+  transform: translatex(-600px);
+  animation: text-animation 1.5s ease forwards;
+}
+@keyframes text-animation{
+  100%{
+    transform: translateX(100px);
+  }
+}
+.model img{
+  transform: translatex(600px);
+  animation: image-animation 1.5s ease forwards;
+}
+@keyframes image-animation{
+  100%{
+    transform: translate(0);
+  }
+}
+
 
 .model {
   height: 400px;
